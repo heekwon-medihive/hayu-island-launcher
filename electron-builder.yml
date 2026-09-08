@@ -1,8 +1,8 @@
-appId: 'helioslauncher'
-productName: 'Helios Launcher'
-artifactName: '${productName}-setup-${version}.${ext}'
+appId: 'kr.hayuisland.launcher'
+productName: '하유아일랜드 런처'
+artifactName: 'HayuIsland-Launcher-setup-${version}.${ext}'
 
-copyright: 'Copyright © 2018-2026 Daniel Scalzi'
+copyright: 'Copyright © 2026 하유아일랜드. Helios Launcher (MIT) 기반'
 
 asar: true
 compression: 'maximum'
@@ -33,18 +33,24 @@ mac:
       arch:
         - 'x64'
         - 'arm64'
-  artifactName: '${productName}-setup-${version}-${arch}.${ext}'
+  artifactName: 'HayuIsland-Launcher-setup-${version}-${arch}.${ext}'
   category: 'public.app-category.games'
 
 # Linux Configuration
 linux: 
   target: 'AppImage'
-  maintainer: 'Daniel Scalzi'
-  vendor: 'Daniel Scalzi'
-  synopsis: 'Modded Minecraft Launcher'
-  description: 'Custom launcher which allows users to join modded servers. All mods, configurations, and updates are handled automatically.'
+  maintainer: 'heekwon-medihive'
+  vendor: '하유아일랜드'
+  synopsis: '하유아일랜드 마인크래프트 런처'
+  description: '하유아일랜드 서버 전용 런처. 모드·설정·업데이트를 자동으로 처리한다.'
   category: 'Game'
 
+
+publish:
+  provider: 'github'
+  owner: 'heekwon-medihive'
+  repo: 'hayu-island-launcher'
+  releaseType: 'release'
 
 directories:
   buildResources: 'build'

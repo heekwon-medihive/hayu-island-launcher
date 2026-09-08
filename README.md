@@ -1,211 +1,55 @@
-<p align="center"><img src="./app/assets/images/SealCircle.png" width="150px" height="150px" alt="aventium softworks"></p>
+# 하유아일랜드 런처
 
-<h1 align="center">Helios Launcher</h1>
+하유아일랜드 마인크래프트 서버 전용 런처. 실행하면 마인크래프트 1.21.4, Fabric, SOOP 후원 모드를 자동으로 설치하고 서버에 접속한다.
+[Helios Launcher](https://github.com/dscalzi/HeliosLauncher)(MIT)를 기반으로 이름·디자인·배포 목록만 바꾼 것이다.
 
-<em><h5 align="center">(formerly Electron Launcher)</h5></em>
-
-[<p align="center"><img src="https://img.shields.io/github/actions/workflow/status/dscalzi/HeliosLauncher/build.yml?branch=master&style=for-the-badge" alt="gh actions">](https://github.com/dscalzi/HeliosLauncher/actions) [<img src="https://img.shields.io/github/downloads/dscalzi/HeliosLauncher/total.svg?style=for-the-badge" alt="downloads">](https://github.com/dscalzi/HeliosLauncher/releases) <img src="https://forthebadge.com/images/badges/winter-is-coming.svg"  height="28px" alt="winter-is-coming"></p>
-
-<p align="center">Join modded servers without worrying about installing Java, Forge, or other mods. We'll handle that for you.</p>
-
-![Screenshot 1](https://i.imgur.com/6o7SmH6.png)
-![Screenshot 2](https://i.imgur.com/x3B34n1.png)
-
-## Features
-
-* 🔒 Full account management.
-  * Add multiple accounts and easily switch between them.
-  * Microsoft (OAuth 2.0) + Mojang (Yggdrasil) authentication fully supported.
-  * Credentials are never stored and transmitted directly to Mojang.
-* 📂 Efficient asset management.
-  * Receive client updates as soon as we release them.
-  * Files are validated before launch. Corrupt or incorrect files will be redownloaded.
-* ☕ **Automatic Java validation.**
-  * If you have an incompatible version of Java installed, we'll install the right one *for you*.
-  * You do not need to have Java installed to run the launcher.
-* 📰 News feed natively built into the launcher.
-* ⚙️ Intuitive settings management, including a Java control panel.
-* Supports all of our servers.
-  * Switch between server configurations with ease.
-  * View the player count of the selected server.
-* Automatic updates. That's right, the launcher updates itself.
-*  View the status of Mojang's services.
-
-This is not an exhaustive list. Download and install the launcher to gauge all it can do!
-
-#### Need Help? [Check the wiki.][wiki]
-
-#### Like the project? Leave a ⭐ star on the repository!
-
-## Downloads
-
-You can download from [GitHub Releases](https://github.com/dscalzi/HeliosLauncher/releases)
-
-#### Latest Release
-
-[![](https://img.shields.io/github/release/dscalzi/HeliosLauncher.svg?style=flat-square)](https://github.com/dscalzi/HeliosLauncher/releases/latest)
-
-#### Latest Pre-Release
-[![](https://img.shields.io/github/release/dscalzi/HeliosLauncher/all.svg?style=flat-square)](https://github.com/dscalzi/HeliosLauncher/releases)
-
-**Supported Platforms**
-
-If you download from the [Releases](https://github.com/dscalzi/HeliosLauncher/releases) tab, select the installer for your system.
-
-| Platform | File |
-| -------- | ---- |
-| Windows x64 | `Helios-Launcher-setup-VERSION.exe` |
-| macOS x64 | `Helios-Launcher-setup-VERSION-x64.dmg` |
-| macOS arm64 | `Helios-Launcher-setup-VERSION-arm64.dmg` |
-| Linux x64 | `Helios-Launcher-setup-VERSION.AppImage` |
-
-## Console
-
-To open the console, use the following keybind.
-
-```console
-ctrl + shift + i
+```
+스트리머 PC의 런처
+  1. distribution/distribution.json 읽기   ◀── 이 저장소 (main 브랜치, raw)
+  2. 빠진 파일 내려받기                    ◀── 우리 모드: 이 저장소 distribution/files/
+                                          ◀── 마인크래프트·Fabric: 공식 서버
+  3. 게임 실행 + 서버 자동 접속
+  4. 런처 자체 업데이트                     ◀── 이 저장소 Releases
 ```
 
-Ensure that you have the console tab selected. Do not paste anything into the console unless you are 100% sure of what it will do. Pasting the wrong thing can expose sensitive information.
+## 스트리머가 하는 일
 
-#### Export Output to a File
+1. [Releases](https://github.com/heekwon-medihive/hayu-island-launcher/releases/latest)에서 설치 파일(윈도우 `.exe`, 맥 `.dmg`)을 받아 설치
+2. 런처에서 마이크로소프트 계정으로 로그인 (정품 확인, 한 번만)
+3. 플레이 → 서버 접속 → 게임 채팅에서 `/soop 로그인`
 
-If you want to export the console output, simply right click anywhere on the console and click **Save as..**
+설치 파일에 개발자 서명이 없어 윈도우에서 "알 수 없는 게시자" 경고가 뜬다. "추가 정보 → 실행"으로 진행하면 된다.
+맥은 우클릭 → 열기.
 
-![console example](https://i.imgur.com/T5e73jP.png)
+## 운영자: 빌드
 
-
-## Development
-
-This section details the setup of a basic developmentment environment.
-
-### Getting Started
-
-**System Requirements**
-
-* [Node.js][nodejs] v22
-
----
-
-**Clone and Install Dependencies**
-
-```console
-> git clone https://github.com/dscalzi/HeliosLauncher.git
-> cd HeliosLauncher
-> npm install
+```bash
+npm ci
+npm start            # 개발 실행
+npm run dist:win     # 윈도우 설치 파일 (윈도우에서)
+npm run dist:mac     # 맥 dmg (맥에서)
 ```
 
----
+Node 22. 각 OS 설치 파일은 그 OS에서만 만들 수 있으므로 GitHub Actions에 맡긴다:
+`v1.0.1` 같은 태그를 푸시하면 세 OS 빌드가 돌고 Releases에 올라간다. 런처의 자동 업데이트도 Releases를 본다.
 
-**Launch Application**
+## 운영자: 모드 업데이트
 
-```console
-> npm start
-```
+1. soop-api에서 모드를 빌드해 `distribution/files/`에 jar를 넣는다
+2. `distribution/distribution.json`을 다시 생성한다 (Nebula, 절차는 `distribution/README.md`)
+3. main에 푸시. 스트리머는 다음에 런처를 켤 때 자동으로 받는다 (raw 캐시 때문에 최대 5분 지연)
 
----
+## 운영자: 처음 한 번 해야 할 것
 
-**Build Installers**
+- **Azure 앱 등록** — 런처의 마이크로소프트 로그인에 우리 앱 ID가 필요하다. `docs/MicrosoftAuth.md` 절차대로 등록하고 모장 심사를 받은 뒤
+  `app/assets/js/ipcconstants.js`의 `AZURE_CLIENT_ID`를 바꾼다. 그 전까지는 Helios 기본값으로 테스트만 한다.
+- 로고: `app/assets/images/SealCircle.png`, `LoadingSeal.png`, `LoadingText.png`, `build/icon.png` (지금은 임시 이미지)
+- 배경: `app/assets/images/backgrounds/0~7.jpg`
 
-To build for your current platform.
+## 구조
 
-```console
-> npm run dist
-```
-
-Build for a specific platform.
-
-| Platform    | Command              |
-| ----------- | -------------------- |
-| Windows x64 | `npm run dist:win`   |
-| macOS       | `npm run dist:mac`   |
-| Linux x64   | `npm run dist:linux` |
-
-Builds for macOS may not work on Windows/Linux and vice-versa.
-
----
-
-### Visual Studio Code
-
-All development of the launcher should be done using [Visual Studio Code][vscode].
-
-Paste the following into `.vscode/launch.json`
-
-```JSON
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Debug Main Process",
-      "type": "node",
-      "request": "launch",
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/electron/cli.js",
-      "args" : ["."],
-      "outputCapture": "std"
-    },
-    {
-      "name": "Debug Renderer Process",
-      "type": "chrome",
-      "request": "launch",
-      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
-      "windows": {
-        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
-      },
-      "runtimeArgs": [
-        "${workspaceFolder}/.",
-        "--remote-debugging-port=9222"
-      ],
-      "webRoot": "${workspaceFolder}"
-    }
-  ]
-}
-```
-
-This adds two debug configurations.
-
-#### Debug Main Process
-
-This allows you to debug Electron's [main process][mainprocess]. You can debug scripts in the [renderer process][rendererprocess] by opening the DevTools Window.
-
-#### Debug Renderer Process
-
-This allows you to debug Electron's [renderer process][rendererprocess]. This requires you to install the [Debugger for Chrome][chromedebugger] extension.
-
-Note that you **cannot** open the DevTools window while using this debug configuration. Chromium only allows one debugger, opening another will crash the program.
-
----
-
-### Note on Third-Party Usage
-
-Please give credit to the original author and provide a link to the original source. This is free software, please do at least this much.
-
-For instructions on setting up Microsoft Authentication, see https://github.com/dscalzi/HeliosLauncher/blob/master/docs/MicrosoftAuth.md.
-
----
-
-## Resources
-
-* [Wiki][wiki]
-* [Nebula (Create Distribution.json)][nebula]
-* [v2 Rewrite Branch (Inactive)][v2branch]
-
-The best way to contact the developers is on Discord.
-
-[![discord](https://discordapp.com/api/guilds/211524927831015424/embed.png?style=banner3)][discord]
-
----
-
-### See you ingame.
-
-
-[nodejs]: https://nodejs.org/en/ 'Node.js'
-[vscode]: https://code.visualstudio.com/ 'Visual Studio Code'
-[mainprocess]: https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes 'Main Process'
-[rendererprocess]: https://electronjs.org/docs/tutorial/application-architecture#main-and-renderer-processes 'Renderer Process'
-[chromedebugger]: https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome 'Debugger for Chrome'
-[discord]: https://discord.gg/zNWUXdt 'Discord'
-[wiki]: https://github.com/dscalzi/HeliosLauncher/wiki 'wiki'
-[nebula]: https://github.com/dscalzi/Nebula 'dscalzi/Nebula'
-[v2branch]: https://github.com/dscalzi/HeliosLauncher/tree/ts-refactor 'v2 branch'
+- `app/` — 화면(ejs)과 런처 로직. 문구는 `app/assets/lang/` (en_US 기본, ko_KR 한글, `_custom.toml` 우리 문구)
+- `distribution/` — 배포 목록과 모드 파일
+- `build/` — 앱 아이콘
+- `electron-builder.yml` — 설치 파일 빌드·Releases 업로드 설정
+- `docs/` — Helios 원본 문서 (배포 목록 형식, 마이크로소프트 인증)

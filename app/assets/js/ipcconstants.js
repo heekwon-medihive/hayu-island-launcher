@@ -1,6 +1,7 @@
 // NOTE FOR THIRD-PARTY
 // REPLACE THIS CLIENT ID WITH YOUR APPLICATION ID.
 // SEE https://github.com/dscalzi/HeliosLauncher/blob/master/docs/MicrosoftAuth.md
+// TODO(하유아일랜드): 우리 Azure 앱 ID로 교체할 것. 지금은 Helios 기본값(테스트용). docs/MicrosoftAuth.md 참고
 exports.AZURE_CLIENT_ID = '1ce6e35a-126f-48fd-97fb-54d143ac6d45'
 // SEE NOTE ABOVE.
 

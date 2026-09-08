@@ -1,6 +1,11 @@
 name: Build
 
-on: push
+# 버전 태그(v1.0.0 …)를 올릴 때만 설치 파일을 빌드해 Releases에 올린다
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
 
 jobs:
   release:

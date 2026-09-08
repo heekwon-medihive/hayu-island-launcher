@@ -3,8 +3,8 @@ const { DistributionAPI } = require('helios-core/common')
 const ConfigManager = require('./configmanager')
 
 // Old WesterosCraft url.
-// exports.REMOTE_DISTRO_URL = 'http://mc.westeroscraft.com/WesterosCraftLauncher/distribution.json'
-exports.REMOTE_DISTRO_URL = 'https://helios-files.geekcorner.eu.org/distribution.json'
+// 배포 목록. 공개 저장소의 main 브랜치에서 그대로 읽는다 (raw.githubusercontent 는 5분쯤 캐시된다)
+exports.REMOTE_DISTRO_URL = 'https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/distribution.json'
 
 const api = new DistributionAPI(
     ConfigManager.getLauncherDirectory(),
