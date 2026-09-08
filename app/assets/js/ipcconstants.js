@@ -1,8 +1,8 @@
 // NOTE FOR THIRD-PARTY
 // REPLACE THIS CLIENT ID WITH YOUR APPLICATION ID.
 // SEE https://github.com/dscalzi/HeliosLauncher/blob/master/docs/MicrosoftAuth.md
-// TODO(하유아일랜드): 우리 Azure 앱 ID로 교체할 것. 지금은 Helios 기본값(테스트용). docs/MicrosoftAuth.md 참고
-exports.AZURE_CLIENT_ID = '1ce6e35a-126f-48fd-97fb-54d143ac6d45'
+// 하유아일랜드 런처 Entra 앱 (테넌트 920161f9-85be-42eb-927d-d5d7ab241a5f). 모장 심사 통과 전에는 로그인이 거부된다
+exports.AZURE_CLIENT_ID = 'af43c24e-f891-4f7a-86e0-44f53a4ca87e'
 // SEE NOTE ABOVE.
 
 
