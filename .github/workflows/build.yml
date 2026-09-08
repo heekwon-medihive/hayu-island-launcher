@@ -15,8 +15,11 @@ jobs:
       contents: write
 
     strategy:
+      # 동시에 돌면 같은 태그로 릴리스가 두 개 생긴다 — 하나씩 돌린다.
+      # 리눅스는 스트리머가 쓰지 않으므로 빌드하지 않는다.
+      max-parallel: 1
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [windows-latest, macos-latest]
 
     steps:
       - name: Check out Git repository
