@@ -1,0 +1,21 @@
+{
+  "$schema": "file:///Users/choheekwon/hayu-island-launcher/distribution/schemas/ServerMetaSchema.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "name": "하유아일랜드",
+    "description": "하유아일랜드 스트리머 서버 (Minecraft 1.21.4 · Fabric). 접속 후 /soop 로그인 으로 SOOP 후원을 연동하세요.",
+    "icon": "",
+    "address": "38.96.30.98:27039",
+    "discord": {
+      "shortId": "하유아일랜드",
+      "largeImageText": "하유아일랜드",
+      "largeImageKey": "seal-circle"
+    },
+    "mainServer": true,
+    "autoconnect": true
+  },
+  "fabric": {
+    "version": "0.19.5"
+  },
+  "untrackedFiles": []
+}
