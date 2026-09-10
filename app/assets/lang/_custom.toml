@@ -4,7 +4,7 @@
 title = "하유아일랜드 런처"
 
 [ejs.landing]
-mediaGitHubURL = "https://github.com/heekwon-medihive/hayu-island-launcher"
+mediaGitHubURL = "#"
 mediaXURL = "#"
 mediaInstagramURL = "#"
 mediaYouTubeURL = "#"
