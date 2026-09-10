@@ -222,6 +222,18 @@ ipcMain.on(MSFT_OPCODE.OPEN_LOGOUT, (ipcEvent, uuid, isLastAccount) => {
 // be closed automatically when the JavaScript object is garbage collected.
 let win
 
+/**
+ * 하유아일랜드: 시간대별 배경.
+ *   0.jpg 아침의 하늘섬  05:00-15:59
+ *   1.jpg 노을빛 선착장  16:00-19:59
+ *   2.jpg 달빛 아래 하늘배 20:00-04:59
+ */
+function backgroundForHour(hour) {
+    if (hour >= 5 && hour < 16) return 0
+    if (hour >= 16 && hour < 20) return 1
+    return 2
+}
+
 function createWindow() {
 
     win = new BrowserWindow({
@@ -239,7 +251,7 @@ function createWindow() {
     remoteMain.enable(win.webContents)
 
     const data = {
-        bkid: Math.floor((Math.random() * fs.readdirSync(path.join(__dirname, 'app', 'assets', 'images', 'backgrounds')).length)),
+        bkid: backgroundForHour(new Date().getHours()),
         lang: (str, placeHolders) => LangLoader.queryEJS(str, placeHolders)
     }
     Object.entries(data).forEach(([key, val]) => ejse.data(key, val))

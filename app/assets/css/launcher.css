@@ -3985,3 +3985,27 @@ input:checked + .toggleSwitchSlider:before {
 .mediaDivider:has(+ #externalMedia:not(:has(.mediaContainer))) {
     display: none;
 }
+
+
+/* 하유아일랜드: 로고는 투명 배경이라 원 안쪽을 하늘빛 반투명으로 채운다 */
+#welcomeImageSeal, #loginImageSeal {
+    background: radial-gradient(circle at 50% 40%, rgba(150, 205, 255, 0.55), rgba(20, 40, 80, 0.55));
+    height: 190px;
+    width: 190px;
+    border-color: rgba(255, 255, 255, 0.85);
+}
+#image_seal {
+    background: radial-gradient(circle at 50% 40%, rgba(150, 205, 255, 0.55), rgba(20, 40, 80, 0.55));
+    height: 86px;
+    width: 86px;
+    object-fit: contain;
+}
+/* 아래 정보 띠 가독성: 하단 그라데이션을 조금 더 진하게 */
+#main {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.15) 45%, rgba(0, 0, 0, 0) 100%) !important;
+}
+/* 플레이 버튼 강조색: 배경의 등불 주황 */
+#launch_button:hover,
+#launch_button:focus {
+    text-shadow: 0px 0px 20px #ffb35c, 0px 0px 30px #ff9a2e;
+}

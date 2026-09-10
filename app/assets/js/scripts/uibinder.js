@@ -70,6 +70,15 @@ async function showMainUI(data){
     setTimeout(() => {
         document.getElementById('frameBar').style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
         document.body.style.backgroundImage = `url('assets/images/backgrounds/${document.body.getAttribute('bkid')}.jpg')`
+        // 하유아일랜드: 런처를 켜둔 채 시간대가 바뀌면 배경도 따라간다 (index.js backgroundForHour와 같은 기준)
+        const hayuBackgroundForHour = (h) => (h >= 5 && h < 16) ? 0 : (h >= 16 && h < 20) ? 1 : 2
+        setInterval(() => {
+            const next = String(hayuBackgroundForHour(new Date().getHours()))
+            if (document.body.getAttribute('bkid') !== next) {
+                document.body.setAttribute('bkid', next)
+                document.body.style.backgroundImage = `url('assets/images/backgrounds/${next}.jpg')`
+            }
+        }, 60 * 1000)
         $('#main').show()
 
         const isLoggedIn = Object.keys(ConfigManager.getAuthAccounts()).length > 0
