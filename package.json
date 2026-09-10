@@ -1,6 +1,6 @@
 {
   "name": "hayu-island-launcher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "productName": "하유아일랜드 런처",
   "description": "하유아일랜드 마인크래프트 서버 전용 런처. 게임·Fabric·SOOP 후원 모드를 자동으로 설치하고 서버에 접속한다.",
   "author": "heekwon-medihive (https://github.com/heekwon-medihive)",
