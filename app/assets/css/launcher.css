@@ -3996,8 +3996,8 @@ input:checked + .toggleSwitchSlider:before {
 }
 #image_seal {
     background: radial-gradient(circle at 50% 40%, rgba(150, 205, 255, 0.55), rgba(20, 40, 80, 0.55));
-    height: 86px;
-    width: 86px;
+    height: 110px;
+    width: 110px;
     object-fit: contain;
 }
 /* 아래 정보 띠 가독성: 하단 그라데이션을 조금 더 진하게 */
