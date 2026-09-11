@@ -120,6 +120,16 @@
           }
         },
         {
+          "id": "kr.hayuisland.ui:hayu_ui:0.1.0-preview.1@jar",
+          "name": "Hayu Island UI Preview",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 416972,
+            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/hayu-ui-0.1.0-preview.1.jar",
+            "MD5": "07903a5a3035087cb6412c74d7aeb645"
+          }
+        },
+        {
           "id": "kr.soopapi.mod:soopapi:0.1.0@jar",
           "name": "SOOP Donation",
           "type": "FabricMod",
