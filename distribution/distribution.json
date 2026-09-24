@@ -120,13 +120,13 @@
           }
         },
         {
-          "id": "kr.hayuisland.ui:hayu_ui:0.1.2-preview.1@jar",
-          "name": "Hayu Island UI Preview",
+          "id": "kr.hayuisland.hud:hayu_hud:0.8.0-main-menu-test.1@jar",
+          "name": "Hayu Island HUD Test",
           "type": "FabricMod",
           "artifact": {
-            "size": 3704139,
-            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/hayu-ui-0.1.2-preview.1.jar",
-            "MD5": "68ee8f64036383a8c8c31e24690e6fa6"
+            "size": 11166683,
+            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/hayu-hud-0.8.0-main-menu-test.1.jar",
+            "MD5": "3527058cdfb4b369211486acbc9544b0"
           }
         },
         {
