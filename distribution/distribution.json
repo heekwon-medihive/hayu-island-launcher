@@ -6,7 +6,7 @@
       "name": "하유아일랜드",
       "description": "하유아일랜드 스트리머 서버 (Minecraft 1.21.4 · Fabric). 접속 후 /soop 로그인 으로 SOOP 후원을 연동하세요.",
       "icon": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/hayu-1.21.4.png",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "address": "38.96.30.98:27039",
       "minecraftVersion": "1.21.4",
       "discord": {
@@ -120,13 +120,23 @@
           }
         },
         {
-          "id": "kr.hayuisland.hud:hayu_hud:0.8.0-main-menu-test.1@jar",
+          "id": "kr.hayuisland.hud:hayu_hud:0.21.0-quest-live-test.1@jar",
           "name": "Hayu Island HUD Test",
           "type": "FabricMod",
           "artifact": {
-            "size": 11166683,
-            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/hayu-hud-0.8.0-main-menu-test.1.jar",
-            "MD5": "3527058cdfb4b369211486acbc9544b0"
+            "size": 19943544,
+            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/hayu-hud-0.21.0-quest-live-test.1.jar",
+            "MD5": "9fabade80227ef295da01c79c3f4c56b"
+          }
+        },
+        {
+          "id": "com.hyfata.najoan:koreanpatch:1.9.6+mc1.21.3@jar",
+          "name": "Korean Patch",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 655990,
+            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/koreanpatch-fabric-1.9.6+mc1.21.3.jar",
+            "MD5": "c95329994b4cc793ec412462543c4f67"
           }
         },
         {
