@@ -41,8 +41,9 @@ Node 22. 각 OS 설치 파일은 그 OS에서만 만들 수 있으므로 GitHub 
 
 ## 운영자: 처음 한 번 해야 할 것
 
-- **Azure 앱 등록** — 런처의 마이크로소프트 로그인에 우리 앱 ID가 필요하다. `docs/MicrosoftAuth.md` 절차대로 등록하고 모장 심사를 받은 뒤
-  `app/assets/js/ipcconstants.js`의 `AZURE_CLIENT_ID`를 바꾼다. 그 전까지는 Helios 기본값으로 테스트만 한다.
+- ✅ **Azure 앱 등록** — 완료. 하유아일랜드 Entra 앱 클라이언트 ID `af43c24e-f891-4f7a-86e0-44f53a4ca87e`를
+  `app/assets/js/ipcconstants.js`의 `AZURE_CLIENT_ID`에 적용했다 (2026-09-08, 런처 1.0.2부터 포함).
+  앱은 Azure Portal → Microsoft Entra ID → 앱 등록에서 관리한다. 다시 만들 때의 절차는 `docs/MicrosoftAuth.md`.
 - 로고: `app/assets/images/SealCircle.png`, `LoadingSeal.png`, `LoadingText.png`, `build/icon.png` (지금은 임시 이미지)
 - 배경: `app/assets/images/backgrounds/0~7.jpg`
 
