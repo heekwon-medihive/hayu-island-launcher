@@ -6,7 +6,7 @@
       "name": "하유아일랜드",
       "description": "하유아일랜드 스트리머 서버 (Minecraft 1.21.4 · Fabric). 접속 후 /soop 로그인 으로 SOOP 후원을 연동하세요.",
       "icon": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/hayu-1.21.4.png",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "address": "38.96.30.98:27039",
       "minecraftVersion": "1.21.4",
       "discord": {
@@ -130,6 +130,19 @@
           }
         },
         {
+          "id": "generated.fabricmod:iris:1.8.8+mc1.21.4@jar",
+          "name": "Iris",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2682702,
+            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/optionalon/iris-fabric-1.8.8+mc1.21.4.jar",
+            "MD5": "59d373e4874efbcb8fb426bdefa588d9"
+          },
+          "required": {
+            "value": false
+          }
+        },
+        {
           "id": "com.hyfata.najoan:koreanpatch:1.9.6+mc1.21.3@jar",
           "name": "Korean Patch",
           "type": "FabricMod",
@@ -137,6 +150,16 @@
             "size": 655990,
             "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/koreanpatch-fabric-1.9.6+mc1.21.3.jar",
             "MD5": "c95329994b4cc793ec412462543c4f67"
+          }
+        },
+        {
+          "id": "net.caffeinemc.mods:sodium:0.6.13+mc1.21.4@jar",
+          "name": "Sodium",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1306799,
+            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/sodium-fabric-0.6.13+mc1.21.4.jar",
+            "MD5": "28922a78d1876ee062e3265f10abcc46"
           }
         },
         {
