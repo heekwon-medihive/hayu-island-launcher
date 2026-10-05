@@ -171,6 +171,17 @@
             "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/soop-donation-mod-0.1.0.jar",
             "MD5": "d254be5bf1f24201bb732e0c106680ab"
           }
+        },
+        {
+          "id": "Mellow_v3.4.1a.zip",
+          "name": "Mellow_v3.4.1a.zip",
+          "type": "File",
+          "artifact": {
+            "size": 1804545,
+            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/files/shaderpacks/Mellow_v3.4.1a.zip",
+            "MD5": "c43c4b9f13fba6842d6ec1d8b65df76a",
+            "path": "shaderpacks/Mellow_v3.4.1a.zip"
+          }
         }
       ]
     }

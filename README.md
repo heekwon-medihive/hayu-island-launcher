@@ -21,6 +21,14 @@
 설치 파일에 개발자 서명이 없어 윈도우에서 "알 수 없는 게시자" 경고가 뜬다. "추가 정보 → 실행"으로 진행하면 된다.
 맥은 우클릭 → 열기.
 
+## 셰이더
+
+런처가 **Sodium**(최적화, 필수) · **Iris**(셰이더 실행, 기본 켜짐) 와 셰이더팩 **Mellow** 를 함께 설치한다.
+게임 안 ESC → 비디오 설정 → 셰이더 팩 → Mellow 를 고르고 적용하면 켜진다 (기본은 꺼짐). 컴퓨터가 느려지면 같은 곳에서 끈다.
+
+- Mellow v3.4.1a © 2026 TheCMK — MIT License (https://codeberg.org/TheCMK/mellow-shader). zip 을 고치지 않고 그대로 배포 (안에 LICENSE 포함)
+- Iris (LGPL-3.0) · Sodium (PolyForm Shield 1.0.0) — Modrinth 원본 그대로
+
 ## 운영자: 빌드
 
 ```bash
