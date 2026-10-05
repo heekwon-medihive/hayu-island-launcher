@@ -6,7 +6,7 @@
       "name": "하유아일랜드",
       "description": "하유아일랜드 스트리머 서버 (Minecraft 1.21.4 · Fabric). 접속 후 /soop 로그인 으로 SOOP 후원을 연동하세요.",
       "icon": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/hayu-1.21.4.png",
-      "version": "1.2.2",
+      "version": "1.3.0",
       "address": "38.96.30.98:27039",
       "minecraftVersion": "1.21.4",
       "discord": {
@@ -120,13 +120,13 @@
           }
         },
         {
-          "id": "kr.hayuisland.hud:hayu_hud:0.23.1-bgm-test.1@jar",
+          "id": "kr.hayuisland.hud:hayu_hud:0.24.1-hagom-test.1@jar",
           "name": "Hayu Island HUD Test",
           "type": "FabricMod",
           "artifact": {
-            "size": 22609064,
-            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/hayu-hud-0.23.1-bgm-test.1.jar",
-            "MD5": "ca82c7ac4fbe2abf8b4c8e785253d13b"
+            "size": 22610293,
+            "url": "https://raw.githubusercontent.com/heekwon-medihive/hayu-island-launcher/main/distribution/servers/hayu-1.21.4/fabricmods/required/hayu-hud-0.24.1-hagom-test.1.jar",
+            "MD5": "0dcab9145e2fd06cbeea100a7030f232"
           }
         },
         {
